@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ExtensionModel>
-    <Runtime>
-    </Runtime>
+    <!--We need to add our own assembly to composition so MEF correctly loads our implementation-->
+    <Extension path="/MonoDevelop/Ide/Composition">
+        <Assembly file="EditorMargin.dll" />   
+    </Extension>
 </ExtensionModel>

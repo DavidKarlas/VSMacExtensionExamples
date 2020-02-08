@@ -5,4 +5,17 @@
   <ItemGroup>
     <PackageReference Include="MonoDevelop.Addins" Version="0.4.6" />
   </ItemGroup>
+  <ItemGroup>
+    <!--This is needed so we reference all Editor releated .dlls
+        like:
+        Microsoft.VisualStudio.Text.Data.dll
+        Microsoft.VisualStudio.Text.UI.dll
+        Microsoft.VisualStudio.Text.UI.Cocoa.dll
+        ...-->
+    <AddinReference Include="MonoDevelop.TextEditor.Cocoa" />
+  </ItemGroup>
+  <ItemGroup>
+    <!--This is needed for using System.ComponentModel.Composition;-->
+    <Reference Include="System.ComponentModel.Composition" />
+  </ItemGroup>
 </Project>
